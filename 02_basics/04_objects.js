@@ -53,3 +53,33 @@ console.log(Object.values(AppUser));
 console.log(Object.entries(AppUser));
 
 console.log(AppUser.hasOwnProperty('LoggedIn'));
+
+
+
+const course = {
+    courseName : "Python",
+    coursePrice : 1000,
+    CourseInstructor : "Lakashyajit"
+}
+
+course.CourseInstructor
+
+// const {CourseInstructor} = course
+const {CourseInstructor: instructor} = course
+// console.log(CourseInstructor);
+console.log(instructor);
+
+
+// JSON //
+
+// {
+//     "name" : "Lakshyajit",
+//     "course" : "JS in hindi",
+//     "price" : "free"
+// }
+
+[
+    {},
+    {},
+    {}
+]
