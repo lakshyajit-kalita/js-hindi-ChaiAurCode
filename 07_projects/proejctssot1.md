@@ -5,9 +5,9 @@
 
 #Solution Code
 
-## Project 1
+## Project 01 solution
 
-```javascrpt
+```javascript
 console.log("Hi This Is My First Code Here");
 const buttons = document.querySelectorAll('.button');
 // cosole.log(buttons)
@@ -35,5 +35,45 @@ buttons.forEach(function (button) {
   })
 });
 
+
+```
+
+## project 02 solution
+
+```javascript
+const form = document.querySelector('form')
+
+form.addEventListener('submit', function(e){
+  e.preventDefault()
+
+  const height = parseInt(document.querySelector('#height').value)
+  const weight = parseInt(document.querySelector('#weight').value)
+  const results = document.querySelector('#results')
+
+  
+ if ( height === '' || height < 0 || isNaN(height)) {
+   results.innerHTML = `Please give a valid height ${height}`;
+ } else if ( weight === '' || weight < 0 || isNaN(weight)) {
+   results.innerHTML = `Please give a valid weight ${weight}`;
+ } 
+
+ const bmi = (weight / ((height ** 2)/10000)).toFixed(2)
+
+
+ let catagory = ``
+//let category = '' is used to store the BMI classification result, which is later displayed after determining the BMI value using conditional statements.
+
+ if (bmi < 18.6 ){
+   catagory = `under weight`
+ } else if (bmi >= 18.6 && bmi <=24.9){
+   catagory = `Normal Range`
+ } else{
+   catagory = ` Over Weight`
+ }
+ results.innerHTML = `
+ <span>${bmi}<span/>
+ <span>${catagory}</span>
+ `
+});
 
 ```
