@@ -77,3 +77,14 @@ form.addEventListener('submit', function(e){
 });
 
 ```
+
+## proejct 03 solution 
+
+```javascript
+const clock = document.getElementById('clock')
+
+setInterval ( function () {
+  let date = new Date();
+  clock.innerHTML = date.toLocaleTimeString()
+}, 1000)
+```
